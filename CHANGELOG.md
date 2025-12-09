@@ -1,3 +1,13 @@
+## 0.2.0 (2025-12-09)
+
+### Feat
+
+- add test content (#6)
+
+### Fix
+
+- avoid ci when bump and avoid bumping without deployment (#15)
+
 ## 0.1.0 (2025-12-09)
 
 ### Feat
