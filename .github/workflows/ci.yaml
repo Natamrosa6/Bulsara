@@ -16,6 +16,7 @@ defaults:
     shell: bash
 jobs:
   build:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.152.2
@@ -69,6 +70,7 @@ jobs:
           path: ./public
 
   deploy:
+    if: "!startsWith(github.event.head_commit.message, 'bump:')"
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
